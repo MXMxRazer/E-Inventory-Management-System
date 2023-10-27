@@ -5,9 +5,16 @@ spring:
   application:
     name: discovery-service-server
 
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
 eureka:
   instance:
     hostname: localhost
   client:
     register-with-eureka: false
     fetch-registry: false
+  username: ${EUREKA_USERNAME:eureka}
+  password: ${EUREKA_PASSWORD:password}
