@@ -20,7 +20,7 @@
         <module>order_service</module>
         <module>discovery_service_server</module>
         <module>inventory_service</module>
-        <module>api_gateway</module>
+        <module>api-gateway-server</module>
     </modules>
 
     <properties>
@@ -43,6 +43,13 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.micrometer</groupId>
+                <artifactId>micrometer-tracing-bom</artifactId>
+                <version>${micrometer-tracing.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
