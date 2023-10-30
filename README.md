@@ -45,11 +45,13 @@ Build the docker compose file and the system will be automatically initialized i
 # Accesses: 
 There are various services integrated with multiple monitoring and dev-Ops tools. To access the tools integrated inside the services with default configuration, the following URI's can be pursued: 
 
-## 1. Zipkin: http://localhost:9411
-## 2. Discovery Server: http://localhost:8761
-## 3. Prometheus: http://localhost:9090
-## 4. Grafana: htttp://localhost:3000
+## 1. Zipkin: 
+http://localhost:9411
+## 2. Discovery Server: 
+http://localhost:8761
+## 3. Prometheus: 
+http://localhost:9090
+## 4. Grafana: 
+http://localhost:3000
 
 Other Services are managed through discovery server and may subject to change.
-
-
