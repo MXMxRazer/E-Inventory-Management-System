@@ -44,6 +44,10 @@ spring:
           issuer-uri: http://localhost:8080/realms/spring-boot-microservices
 
 management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
   tracing:
     sampling:
       probability: 1.0
