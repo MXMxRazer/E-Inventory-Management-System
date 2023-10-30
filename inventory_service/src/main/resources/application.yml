@@ -17,6 +17,10 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
 
 management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
   tracing:
     sampling:
       probability: 1.0
