@@ -8,6 +8,7 @@ A Spring Microservice Application, used for the management of product and order 
 4. Eureka Server (Netflix)
 5. Java / Spring JPA
 6. Srping web flux.
+7. Apache Kafka.
 
 # Explanation: 
 
@@ -16,6 +17,7 @@ It is an application, that is created using the concept of microservice architec
 2. Order, Product, Inventory
 3. Authentication Server
 4. Discovery Server
+5. Notification Service
 
 These different services work independently to each other and contact through the webclient, through a closed circuit breaker system only when the transmission of the data is required for the system to function in desired manner. 
 
@@ -33,4 +35,21 @@ These different services work independently to each other and contact through th
 
 ## 4. API Gateway Service: 
 -> It represent an independent service, transmitting the client side requests into the required API endpoint. It correctly identifies the API endpoint request by the client side application and directs       the request to the following respective service, then service's controller takes care for the endpoint to meet it's corresponding acting method.    
+
+## 5. Notification Service: 
+-> It represent an independent service, transmitting the API endpoints request to other services as an asynchronous event-driven architectural calls. The system does not need to wait for the response from this service, which is a huge clearance to the system, as it does not have to get stuck, since notification are nto frequent and only occurs in case of any events. This service is based on the Apache Kafka, a distributed event streaming platform.
+
+## Directions: 
+Build the docker compose file and the system will be automatically initialized in the docker daemon, running in your system's background.
+
+# Accesses: 
+There are various services integrated with multiple monitoring and dev-Ops tools. To access the tools integrated inside the services with default configuration, the following URI's can be pursued: 
+
+## 1. Zipkin: http://localhost:9411
+## 2. Discovery Server: http://localhost:8761
+## 3. Prometheus: http://localhost:9090
+## 4. Grafana: htttp://localhost:3000
+
+Other Services are managed through discovery server and may subject to change.
+
 
