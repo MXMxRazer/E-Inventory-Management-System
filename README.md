@@ -1,6 +1,8 @@
 # E-Inventory-Management-System
 A Spring Microservice Application, used for the management of product and order type inventories.
 
+# NOTE: Docker images for the "mxmxrazer" are not yet avaiable.
+
 # Used Technlogies: 
 1. Java 17
 2. Spring 5
